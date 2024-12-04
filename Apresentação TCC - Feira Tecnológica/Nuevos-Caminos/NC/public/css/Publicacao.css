@@ -1,0 +1,237 @@
+/* Contêiner para publicações, organiza os cartões em uma linha e ajusta o espaçamento */
+.publicacoes-container {
+    display: flex;
+    justify-content: center; /* Centraliza os cartões horizontalmente */
+    gap: 56px; /* Espaçamento entre os cartões */
+    flex-wrap: wrap; /* Permite que os cartões envolvam para a linha seguinte */
+}
+
+/* Estilo dos cartões de publicação */
+.publicacao {
+    background-color: white; /* Cor de fundo dos cartões */
+    border: 1px solid #ddd; /* Borda dos cartões */
+    border-radius: 8px; /* Arredonda os cantos dos cartões */
+    width: 23%; /* Largura dos cartões */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra do cartão */
+    overflow: hidden; /* Oculta o conteúdo que excede os limites do cartão */
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo do cartão verticalmente */
+    margin-bottom: 10px; /* Espaçamento abaixo dos cartões */
+}
+
+/* Estilo para imagens dentro dos cartões */
+.publicacao img {
+    width: 100%; /* Faz a imagem preencher a largura do cartão */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Contêiner para o conteúdo das publicações */
+.publicacao-content {
+    padding: 10px; /* Padding interno */
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    flex-grow: 1; /* Permite que o conteúdo cresça para preencher o espaço disponível */
+}
+
+/* Estilo para a categoria da publicação */
+.publicacao-category {
+    color: #0a577a; /* Cor do texto da categoria */
+    font-weight: bold; /* Deixa o texto em negrito */
+    margin-bottom: 8px; /* Espaçamento abaixo da categoria */
+    font-size: 12px; /* Tamanho da fonte da categoria */
+}
+
+/* Estilo para o título da publicação */
+.publicacao-title {
+    font-size: 14px; /* Tamanho da fonte do título */
+    font-weight: bold; /* Deixa o título em negrito */
+    margin: 0 0 8px 0; /* Margem inferior do título */
+}
+
+/* Estilo para o texto da publicação */
+.publicacao-text {
+    font-size: 12px; /* Tamanho da fonte do texto */
+    color: #555; /* Cor do texto */
+    flex-grow: 1; /* Permite que o texto cresça para preencher o espaço disponível */
+}
+
+/* Estilo para links dentro da publicação */
+.publicacao a {
+    color: #0a577a; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Deixa o texto do link em negrito */
+    font-size: 12px; /* Tamanho da fonte dos links */
+    margin-top: 10px; /* Margem superior dos links */
+    display: inline-block; /* Faz com que o link seja exibido como bloco em linha */
+    align-self: center; /* Centraliza o link horizontalmente */
+}
+
+/* Estilo para o hover sobre os links */
+.publicacao a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #216db4; /* Cor do link ao passar o mouse */
+}
+
+/* Contêiner para ícones e números dentro da publicação */
+.publicacao-icons {
+    display: flex;
+    align-items: center; /* Alinha ícones e números verticalmente */
+    gap: 15px; /* Espaçamento entre ícones e números */
+}
+
+/* Estilo para links de ícones */
+.publicacao-icons a {
+    display: flex;
+    align-items: center; /* Alinha ícones e números verticalmente */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: inherit; /* Mantém a cor herdada */
+}
+
+/* Estilo para ícones dentro da publicação */
+.publicacao-icons i {
+    font-size: 18px; /* Tamanho dos ícones */
+    color: #000; /* Cor dos ícones */
+    margin-right: 5px; /* Espaçamento entre o ícone e o número */
+}
+
+/* Estilo para os números ao lado dos ícones */
+.icon-number {
+    font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto aos números */
+    font-weight: 400; /* Peso da fonte dos números */
+    font-size: 14px; /* Tamanho da fonte dos números */
+    color: #555; /* Cor dos números */
+}
+
+/* Estilo para o hover sobre os links de ícones */
+.publicacao-icons a:hover {
+    color: #162e44; /* Cor ao passar o mouse */
+}
+
+/* Estilo para ícones de visualização e comentários */
+.icon-view, .icon-comment {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fonte dos ícones Font Awesome */
+.fas {
+    font-family: 'Font Awesome 5 Free'; /* Fonte dos ícones */
+    font-weight: 900; /* Peso dos ícones */
+}
+
+/* Estilo do botão pequeno */
+.btn-sm {
+    padding: 0.2rem 0.4rem; /* Reduz o preenchimento do botão */
+    font-size: 0.7rem; /* Reduz o tamanho da fonte do botão */
+    line-height: 1.2; /* Ajusta a altura da linha para alinhar o texto verticalmente */
+}
+
+/* Tamanho dos ícones dentro do botão pequeno */
+.btn-sm .fa {
+    font-size: 0.9rem; /* Reduz o tamanho do ícone */
+}
+
+/* Estilo do botão de filtro dentro do título da seção */
+.title-classic .dropdown-toggle {
+    padding: 0.2rem 0.4rem; /* Reduz o preenchimento do botão */
+    font-size: 0.7rem; /* Reduz o tamanho da fonte do botão */
+    line-height: 1.2; /* Ajusta a altura da linha */
+}
+
+/* Tamanho do ícone dentro do botão de filtro */
+.title-classic .dropdown-toggle i {
+    font-size: 1rem; /* Reduz o tamanho do ícone dentro do botão */
+}
+
+/* Margem à esquerda do texto dentro do botão de filtro */
+.title-classic .dropdown-toggle span {
+    margin-left: 0.5rem; /* Ajusta a margem conforme necessário */
+}
+
+/* Estilo do menu suspenso do dropdown */
+.dropdown-menu {
+    max-height: 200px; /* Define a altura máxima do menu suspenso */
+    overflow-y: auto; /* Adiciona rolagem se necessário */
+    padding: 0.5rem; /* Adiciona um pouco de padding interno */
+}
+
+/* Estilo dos rótulos de checkbox no menu suspenso */
+.dropdown-menu .form-check-label {
+    font-size: 0.875rem; /* Ajusta o tamanho da fonte dos rótulos */
+}
+
+.title-with-line {
+    display: inline-block; /* Garante que a linha fique logo abaixo do título */
+    border-bottom: 2px solid #01b3a7; /* Linha com espessura e cor */
+    padding-bottom: 5px; /* Ajusta o espaçamento entre o texto e a linha */
+  }
+  
+
+/* Estilo do título da seção */
+.title-classic {
+    display: flex;
+    align-items: center; /* Alinha o título e o botão verticalmente */
+    justify-content: space-between; /* Espaça o título e o botão */
+}
+
+/* Alinhamento do título da seção e botão de filtro */
+.title-classic-title {
+    display: flex;
+    align-items: center; /* Alinha o título e o botão verticalmente */
+}
+
+/* Margem direita do título da seção */
+.title-classic-title h3 {
+    margin-right: 20px; /* Ajuste a margem conforme necessário */
+}
+
+/* Tamanho do ícone de filtro no botão */
+.btn .fa-filter {
+    font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+}
+
+/* Margem à esquerda do texto no botão */
+.ms-2 {
+    margin-left: 0.5rem; /* Margem à esquerda do texto */
+}
+
+/* Estilo do texto ao lado do botão */
+.title-classic-text {
+    display: flex;
+    align-items: center; /* Alinha o texto verticalmente */
+}
+
+/* Estilo para o separador entre botões */
+.separator {
+    width: 1px; /* Largura da linha vertical */
+    height: 24px; /* Altura da linha vertical, ajuste conforme necessário */
+    background-color: #ddd; /* Cor da linha vertical */
+    margin: 0 10px; /* Espaçamento horizontal ao redor da linha */
+}
+
+/* Estilo do botão Nova Publicação */
+.btn-nova-publicacao {
+    background-color: #162e44; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 10px 20px; /* Preenchimento interno do botão */
+    font-size: 14px; /* Tamanho da fonte do texto */
+    border-radius: 5px; /* Cantos arredondados do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    text-decoration: none; /* Remove o sublinhado do texto */
+}
+
+/* Estilo do botão Nova Publicação ao passar o mouse */
+.btn-nova-publicacao:hover {
+    background-color: #216db4; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+/* Ajuste para telas pequenas */
+@media (max-width: 768px) {
+    .publicacao {
+        width: 100%; /* Faz com que os cartões ocupem toda a largura da tela */
+    }
+}
